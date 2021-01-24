@@ -1,0 +1,18 @@
+apiVersion: gateway.solo.io/v1
+kind: RouteTable
+metadata:
+  creationTimestamp: null
+  generation: 173
+  labels:
+    domain: localhost
+  name: foo
+  namespace: gloo-system
+  resourceVersion: "13056819"
+spec:
+  routes:
+    - matchers:
+        - prefix: /foo
+      options:
+        prefixRewrite: /
+      redirectAction:
+        hostRedirect: "yahoo.com"
